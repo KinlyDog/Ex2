@@ -1,6 +1,6 @@
 public class Level1 {
     public static int SumOfThe(int n, int[] data) {
-        int ret = -1;
+        int sumAllNumbersInList = -1;
 
         for (int i = 0; i < n; i++) {
             int t = 0;
@@ -17,11 +17,11 @@ public class Level1 {
             }
 
             if (sum == data[i]) {
-                ret = sum;
+                sumAllNumbersInList = sum;
                 break;
             }
         }
 
-        return ret;
+        return sumAllNumbersInList;
     }
 }
