@@ -1,10 +1,10 @@
 public class Level1 {
     public static int SumOfThe(int n, int[] data) {
-        int sumAllNumbersInList = -1;
+        int otherNumbersSum = -1;
 
         for (int i = 0; i < n; i++) {
             int t = 0;
-            int sum = 0;
+            otherNumbersSum = 0;
 
             while (t < n) {
                 if (i == t) {
@@ -12,16 +12,15 @@ public class Level1 {
                     continue;
                 }
 
-                sum += data[t];
+                otherNumbersSum += data[t];
                 t++;
             }
 
-            if (sum == data[i]) {
-                sumAllNumbersInList = sum;
-                break;
+            if (otherNumbersSum == data[i]) {
+                return otherNumbersSum;
             }
         }
 
-        return sumAllNumbersInList;
+        return otherNumbersSum;
     }
 }
